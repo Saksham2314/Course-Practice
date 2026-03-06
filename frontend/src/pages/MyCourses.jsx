@@ -15,7 +15,7 @@ export const MyCourses = () => {
 
   const fetchMyCourses = async () => {
     try {
-      const response = await fetch('http://localhost:5000/api/courses');
+      const response = await fetch('https://course-practice-kxuw.onrender.com/api/courses');
       const allCourses = await response.json();
       // Filter courses created by the current user
       const myCourses = allCourses.filter(
@@ -35,7 +35,7 @@ export const MyCourses = () => {
     }
 
     try {
-      const response = await fetch(`http://localhost:5000/api/courses/${courseId}`, {
+      const response = await fetch(`https://course-practice-kxuw.onrender.com/api/courses/${courseId}`, {
         method: 'DELETE',
         headers: {
           'Authorization': `Bearer ${token}`,

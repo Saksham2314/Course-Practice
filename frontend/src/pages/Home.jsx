@@ -9,7 +9,7 @@ export const Home = () => {
   useEffect(() => {
     const fetchCourses = async () => {
       try {
-        const response = await fetch('http://localhost:5000/api/courses');
+        const response = await fetch('https://course-practice-kxuw.onrender.com/api/courses');
         const data = await response.json();
         setCourses(data);
       } catch (err) {

@@ -26,7 +26,7 @@ export const Admin = () => {
 
   const fetchCourses = async () => {
     try {
-      const response = await fetch('http://localhost:5000/api/courses');
+      const response = await fetch('https://course-practice-kxuw.onrender.com/api/courses');
       const data = await response.json();
       setCourses(data);
     } catch (err) {
@@ -47,7 +47,7 @@ export const Admin = () => {
     setError('');
 
     try {
-      const response = await fetch('http://localhost:5000/api/courses', {
+      const response = await fetch('https://course-practice-kxuw.onrender.com/api/courses', {
         method: 'POST',
         headers: {
           'Authorization': `Bearer ${token}`,
@@ -75,7 +75,7 @@ export const Admin = () => {
     if (!confirm('Are you sure you want to delete this course?')) return;
 
     try {
-      const response = await fetch(`http://localhost:5000/api/courses/${courseId}`, {
+      const response = await fetch(`https://course-practice-kxuw.onrender.com/api/courses/${courseId}`, {
         method: 'DELETE',
         headers: {
           'Authorization': `Bearer ${token}`,
